@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Navel Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Navel Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="well"> <!--well class adds a rounded border around an element with a gray background color and some padding.-->
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <!-- A <div> belonging to the well class contains a dropdown menu with an id of selDataset. -->
+          <!--dropdown menu options are generated dynamically. HTML code is modified to call JavaScript function: optionChanged()-->
+
+          <!--The <select> tag now has an additional attribute, called onchange, which is associated with optionChanged()-->
+          <!--When a change takes place in the dropdown menu, the optionChanged() function is called.-->
+          <!--this refers to the dropdown menu HTML element. this.value returns to the value attribute of the current dropdown menu selection.-->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select> 
+
+          <!-- note: The JavaScript keyword this is used to access the object in question. In the context of an event, 
+            it refers to the HTML element that received the event. In this case, this refers to the dropdown menu.-->
+
+        </div>
+        <!--create Bootstrap panel below dropdown menu-->
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <!--A <div> with an id of sample-metadata is the information panel.-->
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="plots.js"></script>
+
+</body>
+</html>

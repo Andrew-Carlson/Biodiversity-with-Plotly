@@ -1,1 +1,2 @@
 # Biodiversity-with-Plotly
+In this project, a dashboard on an interactive webpage was created using the plotly.js library, HTML, Javascript, CSS, and the d3.js library to visualize data regarding the bacterial species found in the navels of a sample of anonymous volunteers. This visualization primarily helps the volunteers see what the top ten bacterial species in their navels are, and the information regarding each volunteer is also displayed.

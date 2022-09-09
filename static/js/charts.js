@@ -125,7 +125,9 @@ function buildCharts(sample) {
 
     //Create the layout for the bar chart. 
     var barLayout = {
-      title: `Top Ten Bacteria Cultures Found in Sample ${sample}`
+      title: `<b>Top Ten Bacteria Cultures Found in Sample ${sample}</b>`, 
+      font: { size: 13, color: "black"},
+      paper_bgcolor: "lightgray",
     };
 
     // Use Plotly to plot the data with the layout. 
@@ -150,9 +152,11 @@ function buildCharts(sample) {
 
     // Create the layout for the bubble chart.
     var bubbleLayout = {
-      title: `All Bacteria Cultures for Sample ${sample}`,
+      title: `<b>All Bacteria Cultures for Sample ${sample}</b>`,
+      font: { size: 20, color: "black" },
       xaxis:{title: "OTU ID"},
-      yaxis: {title: "Bacteria Count"}
+      yaxis: {title: "Bacteria Count"},
+      paper_bgcolor: "lightgray",
     };
 
     // Use Plotly to plot the data with the layout. Recall that data must be passed as an array. Layout is okay as an object.
@@ -186,6 +190,7 @@ function buildCharts(sample) {
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
       margin: { t: 25, r: 25, l: 25, b: 25 },
+      paper_bgcolor: "lightgray",
       font: { color: "black", family: "Arial" }
     };
 
